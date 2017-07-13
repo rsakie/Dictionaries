@@ -90,24 +90,29 @@ namespace Dictionaries
             //print the animal with the highest quantity to the console
             //remove the zoo animalwith the lowest count
 
-            Dictionary<string, int> zooAnimals = new Dictionary<string, int>();
-
-            zooAnimals.Add("Elephant", 1);
-            zooAnimals.Add("Camel", 2);
-            zooAnimals.Add("Wolf", 3);
-            zooAnimals.Add("Shark", 4);
-            zooAnimals.Add("Polar Bear", 5);
-            zooAnimals.Add("Flamingo", 6);
-            zooAnimals.Add("Hippo", 7);
-            zooAnimals.Add("Lion", 8);
-            zooAnimals.Add("Tiger", 9);
-            zooAnimals.Add("Bear", 10);
+            Dictionary<string, int> zooAnimals = new Dictionary<string, int>()
+            {
+                {"Elephant",1},
+                { "Camel", 2},
+                { "Wolf", 3},
+                { "Shark", 4},
+                { "Polar Bear", 5},
+                { "Flamingo", 6},
+                { "Hippo", 7},
+                { "Lion", 8},
+                { "Tiger", 9},
+                { "Bear", 10}
+        };
 
             foreach (KeyValuePair<string, int> animal in zooAnimals)
+                
             {
-                Console.WriteLine("Key: {0}, Value {1}", zooAnimals.Key, zooAnimals.Value);
-                Console.WriteLine(animal.Last);
+                zooAnimals.Remove(zooAnimals.Key);
+
+                Console.WriteLine("{0} {1}" ,animal.Key, animal.Value);
             }
+            
         }
     }
+
 }
