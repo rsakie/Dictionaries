@@ -103,13 +103,16 @@ namespace Dictionaries
                 { "Tiger", 9},
                 { "Bear", 10}
         };
-
+            int lowNumber = 0;
+            int highNumber = 0;
+            Console.WriteLine(lowNumber);
+            lowNumber = highNumber;
             foreach (KeyValuePair<string, int> animal in zooAnimals)
                 
             {
-                zooAnimals.Remove(zooAnimals.Key);
+                zooAnimals.Remove (zooAnimals);
 
-                Console.WriteLine("{0} {1}" ,animal.Key, animal.Value);
+                Console.WriteLine("{0} {10}" ,animal.Value, animal.Key);
             }
             
         }
